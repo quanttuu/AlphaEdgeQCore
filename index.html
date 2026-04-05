@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Offer-Core｜Quant MFE / 投行与咨询商科 / Tech 数据科学 申请服务</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+  <title>Q-Core：AlphaEdge量化面试辅导课程</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&amp;family=Noto+Serif+SC:wght@700;900&amp;display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f5efe8;
+      --bg: #f4efe7;
       --paper: rgba(255, 252, 247, 0.92);
       --card: #fffdf9;
-      --ink: #17233d;
-      --muted: #687385;
-      --line: rgba(23, 35, 61, 0.11);
-      --deep: #1e3159;
-      --teal: #325f8a;
-      --gold: #c88e44;
-      --rose: #b45a4a;
-      --soft: #eee5d7;
-      --shadow: 0 18px 45px rgba(30, 49, 89, 0.12);
+      --ink: #152b2f;
+      --muted: #627276;
+      --line: rgba(21, 43, 47, 0.12);
+      --deep: #173c43;
+      --teal: #2d7f84;
+      --gold: #d78b38;
+      --warm: #b55647;
+      --soft: #efe6d6;
+      --shadow: 0 18px 45px rgba(23, 60, 67, 0.12);
       --radius-xl: 28px;
       --radius-lg: 22px;
       --radius-md: 16px;
@@ -34,20 +34,15 @@
 
     html {
       scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    section[id] {
-      scroll-margin-top: 14px;
     }
 
     body {
       font-family: var(--font-body);
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(200, 142, 68, 0.16), transparent 28%),
-        radial-gradient(circle at top right, rgba(50, 95, 138, 0.15), transparent 26%),
-        linear-gradient(180deg, #fbf7f1 0%, #f5efe8 100%);
+        radial-gradient(circle at top left, rgba(215, 139, 56, 0.15), transparent 30%),
+        radial-gradient(circle at top right, rgba(45, 127, 132, 0.14), transparent 28%),
+        linear-gradient(180deg, #fbf7f1 0%, #f4efe7 100%);
       line-height: 1.8;
       font-size: 16px;
     }
@@ -60,7 +55,7 @@
       background-image:
         linear-gradient(rgba(255,255,255,0.14) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.14) 1px, transparent 1px);
-      background-size: 30px 30px;
+      background-size: 28px 28px;
       mask-image: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0));
       z-index: 0;
     }
@@ -87,7 +82,7 @@
     .hero {
       position: relative;
       overflow: hidden;
-      background: linear-gradient(135deg, rgba(24, 37, 67, 0.97), rgba(44, 82, 120, 0.93));
+      background: linear-gradient(135deg, rgba(23, 60, 67, 0.96), rgba(33, 83, 88, 0.93));
       color: #f8f4ee;
       border-radius: 34px;
       padding: 48px 42px 40px;
@@ -98,18 +93,17 @@
     .hero::after {
       content: "";
       position: absolute;
-      right: -80px;
-      top: -60px;
-      width: 270px;
-      height: 270px;
+      right: -70px;
+      top: -50px;
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(200, 142, 68, 0.45), rgba(200, 142, 68, 0.04) 72%);
+      background: radial-gradient(circle, rgba(215, 139, 56, 0.42), rgba(215, 139, 56, 0.04) 72%);
     }
 
     .hero-tag {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
       padding: 8px 14px;
       border-radius: 999px;
       background: rgba(255,255,255,0.12);
@@ -120,17 +114,16 @@
 
     .hero h1 {
       font-family: var(--font-title);
-      font-size: clamp(2.2rem, 6vw, 3.7rem);
-      line-height: 1.18;
+      font-size: clamp(2.3rem, 6vw, 4rem);
+      line-height: 1.2;
       margin-bottom: 16px;
-      max-width: 840px;
-      overflow-wrap: anywhere;
+      max-width: 760px;
     }
 
     .hero p {
       font-size: 1.08rem;
       color: rgba(248, 244, 238, 0.84);
-      max-width: 760px;
+      max-width: 700px;
     }
 
     .top-grid {
@@ -141,17 +134,12 @@
     }
 
     .toc,
-    .lead-note,
-    .section {
+    .lead-note {
       background: var(--paper);
       border: 1px solid rgba(255,255,255,0.58);
+      border-radius: var(--radius-xl);
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
-    }
-
-    .toc,
-    .lead-note {
-      border-radius: var(--radius-xl);
       padding: 24px 24px 22px;
     }
 
@@ -181,7 +169,7 @@
 
     .toc-list a:hover {
       transform: translateY(-1px);
-      border-color: rgba(50, 95, 138, 0.34);
+      border-color: rgba(45, 127, 132, 0.35);
     }
 
     .lead-note p {
@@ -190,9 +178,13 @@
     }
 
     .section {
+      background: var(--paper);
+      border: 1px solid rgba(255,255,255,0.58);
       border-radius: 30px;
+      box-shadow: var(--shadow);
       padding: 34px 30px;
       margin-bottom: 22px;
+      backdrop-filter: blur(10px);
     }
 
     .section-head {
@@ -203,17 +195,32 @@
       margin-bottom: 22px;
     }
 
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--teal);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
     .section h2 {
       font-family: var(--font-title);
       font-size: clamp(1.65rem, 3vw, 2.4rem);
       line-height: 1.28;
-      overflow-wrap: anywhere;
     }
 
-    .section-subcopy {
-      color: var(--muted);
-      max-width: 780px;
-      margin-top: 10px;
+    .section-index {
+      flex: 0 0 auto;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(23, 60, 67, 0.08);
+      color: var(--deep);
+      font-size: 0.92rem;
+      font-weight: 700;
     }
 
     .card-grid {
@@ -240,6 +247,97 @@
       padding: 20px 18px;
     }
 
+    .curriculum-map {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.44fr) 64px minmax(0, 1fr);
+      gap: 16px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+
+    .curriculum-anchor {
+      background: linear-gradient(165deg, rgba(23, 60, 67, 0.96), rgba(45, 127, 132, 0.9));
+      color: #f8f4ee;
+      border-radius: 24px;
+      padding: 24px 22px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .curriculum-anchor .meta {
+      align-self: flex-start;
+      background: rgba(255,255,255,0.12);
+      color: #f8f4ee;
+      border: 1px solid rgba(255,255,255,0.14);
+      margin-bottom: 14px;
+    }
+
+    .curriculum-anchor h3 {
+      font-size: 1.45rem;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      color: #fffaf3;
+    }
+
+    .curriculum-anchor p {
+      color: rgba(248, 244, 238, 0.84);
+      margin-bottom: 8px;
+    }
+
+    .curriculum-brace {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal);
+      font-family: var(--font-title);
+      font-size: clamp(8rem, 16vw, 13rem);
+      line-height: 0.76;
+      transform: translateY(-4px);
+      user-select: none;
+    }
+
+    .curriculum-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .curriculum-unit {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 18px 18px 16px;
+    }
+
+    .curriculum-unit-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .curriculum-unit-head h3 {
+      margin: 0;
+      color: var(--deep);
+      font-size: 1.08rem;
+    }
+
+    .curriculum-hour {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 52px;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: rgba(45, 127, 132, 0.12);
+      color: var(--deep);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
     .card h3,
     .card h4 {
       margin-bottom: 10px;
@@ -250,11 +348,15 @@
       font-size: 1.12rem;
     }
 
+    .card h4 {
+      font-size: 1rem;
+    }
+
     .meta {
       display: inline-flex;
       padding: 7px 11px;
       border-radius: 999px;
-      background: rgba(50, 95, 138, 0.1);
+      background: rgba(45, 127, 132, 0.1);
       color: var(--deep);
       font-size: 0.88rem;
       font-weight: 700;
@@ -284,115 +386,6 @@
       background: var(--gold);
     }
 
-    .service-map {
-      display: grid;
-      grid-template-columns: minmax(220px, 0.46fr) 64px minmax(0, 1fr);
-      gap: 16px;
-      align-items: stretch;
-      margin-bottom: 18px;
-    }
-
-    .service-anchor {
-      background: linear-gradient(165deg, rgba(24, 37, 67, 0.96), rgba(50, 95, 138, 0.9));
-      color: #f8f4ee;
-      border-radius: 24px;
-      padding: 24px 22px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .service-anchor .meta {
-      align-self: flex-start;
-      background: rgba(255,255,255,0.12);
-      color: #f8f4ee;
-      border: 1px solid rgba(255,255,255,0.14);
-      margin-bottom: 14px;
-    }
-
-    .service-anchor h3 {
-      font-size: 1.45rem;
-      line-height: 1.28;
-      margin-bottom: 10px;
-      color: #fffaf3;
-    }
-
-    .service-anchor p {
-      color: rgba(248, 244, 238, 0.84);
-      margin-bottom: 8px;
-    }
-
-    .service-brace {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--teal);
-      font-family: var(--font-title);
-      font-size: clamp(8rem, 16vw, 13rem);
-      line-height: 0.76;
-      transform: translateY(-4px);
-      user-select: none;
-    }
-
-    .service-stack {
-      display: grid;
-      gap: 14px;
-    }
-
-    .service-unit {
-      background: rgba(255,255,255,0.82);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 18px 18px 16px;
-    }
-
-    .service-unit h3 {
-      margin-bottom: 10px;
-      font-size: 1.08rem;
-      color: var(--deep);
-    }
-
-    .service-flow {
-      display: grid;
-      gap: 18px;
-    }
-
-    .service-step {
-      background: rgba(255,255,255,0.72);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 22px 20px;
-    }
-
-    .service-step h3 {
-      font-size: 1.22rem;
-      line-height: 1.4;
-      color: var(--deep);
-      margin-bottom: 10px;
-    }
-
-    .service-step p {
-      color: var(--ink);
-      margin-bottom: 10px;
-    }
-
-    .service-step .table-wrap {
-      margin: 14px 0;
-    }
-
-    .service-summary {
-      margin-top: 12px;
-      font-weight: 600;
-      color: var(--deep);
-    }
-
-    .detail-line {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-    }
-
     .divider {
       height: 1px;
       background: var(--line);
@@ -400,20 +393,37 @@
     }
 
     .note-block {
-      background: linear-gradient(90deg, rgba(200, 142, 68, 0.1), rgba(255,255,255,0.12));
+      background: linear-gradient(90deg, rgba(215, 139, 56, 0.1), rgba(255,255,255,0.12));
       border-left: 4px solid var(--gold);
       border-radius: 0 18px 18px 0;
       padding: 16px 18px;
       margin-top: 16px;
     }
 
+    .module-detail {
+      display: grid;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .image-panel {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 10px;
+    }
+
+    .image-panel img {
+      border-radius: 16px;
+      width: 100%;
+    }
+
     .table-wrap {
-      position: relative;
       overflow-x: auto;
       border: 1px solid var(--line);
       border-radius: 20px;
       background: #fff;
-      -webkit-overflow-scrolling: touch;
     }
 
     table {
@@ -435,7 +445,7 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--muted);
-      background: rgba(24, 37, 67, 0.04);
+      background: rgba(23, 60, 67, 0.04);
     }
 
     tr:last-child td {
@@ -459,15 +469,15 @@
     .chip {
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(50, 95, 138, 0.1);
-      border: 1px solid rgba(50, 95, 138, 0.16);
+      background: rgba(45, 127, 132, 0.1);
+      border: 1px solid rgba(45, 127, 132, 0.16);
       color: var(--deep);
       font-size: 0.9rem;
       font-weight: 700;
     }
 
     .cta-box {
-      background: linear-gradient(135deg, rgba(24, 37, 67, 0.95), rgba(52, 88, 124, 0.92));
+      background: linear-gradient(135deg, rgba(23, 60, 67, 0.95), rgba(39, 90, 95, 0.92));
       color: #f8f4ee;
       border-radius: 28px;
       padding: 30px 28px;
@@ -495,16 +505,13 @@
       text-align: center;
     }
 
-    .mobile-only {
-      display: none;
-    }
-
     @media (max-width: 980px) {
       .top-grid,
+      .module-detail,
       .grid-4,
       .grid-3,
       .grid-2,
-      .service-map {
+      .curriculum-map {
         grid-template-columns: 1fr;
       }
 
@@ -512,219 +519,22 @@
         flex-direction: column;
       }
 
-      .service-brace {
+      .curriculum-brace {
         display: none;
       }
     }
 
     @media (max-width: 720px) {
-      body {
-        font-size: 15px;
-      }
-
-      body::before,
-      .hero::after {
-        display: none;
-      }
-
       .page {
-        padding: 10px 10px 42px;
+        padding: 16px 12px 56px;
       }
 
       .hero {
-        border-radius: 24px;
-        padding: 26px 18px 24px;
-        margin-bottom: 14px;
-      }
-
-      .hero-tag,
-      .meta,
-      .chip {
-        font-size: 0.8rem;
-      }
-
-      .hero h1 {
-        font-size: clamp(1.9rem, 9vw, 2.6rem);
-        line-height: 1.16;
-      }
-
-      .hero p,
-      .section-subcopy,
-      .lead-note p,
-      .card p,
-      .plain-list li,
-      th,
-      td {
-        font-size: 0.95rem;
-        line-height: 1.72;
-      }
-
-      .toc,
-      .lead-note,
-      .section,
-      .cta-box,
-      .card,
-      .service-unit,
-      .service-anchor {
-        border-radius: 20px;
-      }
-
-      .toc,
-      .lead-note,
-      .section {
-        box-shadow: 0 10px 28px rgba(30, 49, 89, 0.08);
-      }
-
-      .toc,
-      .lead-note {
-        padding: 18px 16px;
-      }
-
-      .toc-list {
-        gap: 8px;
-      }
-
-      .toc-list a {
-        padding: 11px 12px;
-        border-radius: 12px;
+        padding: 34px 20px 30px;
       }
 
       .section {
-        padding: 22px 16px;
-        margin-bottom: 14px;
-      }
-
-      .section-head {
-        margin-bottom: 16px;
-      }
-
-      .card,
-      .service-anchor,
-      .service-unit,
-      .service-step,
-      .cta-box {
-        padding: 16px 14px;
-      }
-
-      .service-map,
-      .service-stack,
-      .card-grid,
-      .chips {
-        gap: 10px;
-      }
-
-      .service-anchor h3 {
-        font-size: 1.2rem;
-      }
-
-      .table-wrap {
-        border-radius: 16px;
-        overflow: hidden;
-      }
-
-      .table-wrap::after {
-        content: "左右滑动可查看更多";
-        display: block;
-        padding: 8px 12px;
-        font-size: 0.78rem;
-        color: var(--muted);
-        background: rgba(24, 37, 67, 0.03);
-        border-top: 1px solid var(--line);
-      }
-
-      table {
-        min-width: 640px;
-      }
-
-      th,
-      td {
-        padding: 12px 10px;
-      }
-
-      .chips {
-        margin-top: 12px;
-      }
-
-      .chip {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-      }
-
-      .mobile-only {
-        display: block;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .hero h1,
-      .section h2,
-      .card h3,
-      .cta-box h3 {
-        word-break: break-word;
-      }
-
-      .table-wrap {
-        overflow-x: visible;
-        background: transparent;
-        border: none;
-      }
-
-      .table-wrap::after {
-        display: none;
-      }
-
-      table,
-      thead,
-      tbody,
-      tr,
-      th,
-      td {
-        display: block;
-        width: 100%;
-      }
-
-      table {
-        min-width: 0;
-      }
-
-      thead {
-        display: none;
-      }
-
-      tbody {
-        display: grid;
-        gap: 10px;
-      }
-
-      tr {
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        overflow: hidden;
-      }
-
-      td {
-        border-bottom: 1px solid var(--line);
-        padding: 10px 12px;
-      }
-
-      td:last-child {
-        border-bottom: none;
-      }
-
-      td::before {
-        content: attr(data-label);
-        display: block;
-        margin-bottom: 4px;
-        font-size: 0.72rem;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: var(--muted);
-      }
-
-      .price {
-        font-size: 1rem;
+        padding: 26px 18px;
       }
     }
   </style>
@@ -732,132 +542,243 @@
 <body>
   <div class="page">
     <header class="hero" id="top">
-      <div class="hero-tag">Offer-Core</div>
-      <h1>Offer-Core｜Quant MFE / 投行与咨询商科 / Tech 数据科学 申请服务</h1>
-      <p>面向 Quant MFE、投行与咨询商科、Tech 数据科学方向的高端申请产品线，专注北美 top MFE / 商科、英国 G5 quant / 商科申请，从项目选择、文书设计到申请执行，围绕“职业回报率最高的申请路径”展开。</p>
+      <div class="hero-tag">AlphaEdge Q-Core</div>
+      <h1>Q-Core：AlphaEdge量化面试辅导课程</h1>
+      <p>双轨培养方案：面向即将校招的冲刺版本，以及面向低年级学生的长期成长版本。</p>
     </header>
 
     <div class="top-grid">
       <nav class="toc">
         <h2>目录</h2>
         <ol class="toc-list">
-          <li><a href="#why">为什么选择 Offer-Core</a></li>
-          <li><a href="#services">服务内容与执行路径</a></li>
-          <li><a href="#team">服务团队</a></li>
-          <li><a href="#plans">价格与申请方案</a></li>
-          <li><a href="#cta">如何开始合作</a></li>
+          <li><a href="#why">为什么选择 AlphaEdge？最精准的面试准备方案</a></li>
+          <li><a href="#architecture">双轨课程架构：校招冲刺版与低年级成长版</a></li>
+          <li><a href="#camp">课程 A - 技术能力训练营详解</a></li>
+          <li><a href="#advanced">课程 B - 面试与求职交付详解</a></li>
+          <li><a href="#team">导师团队：实战与学术的结合</a></li>
+          <li><a href="#plans">双轨课程方案与服务保障</a></li>
+          <li><a href="#cta">报名方式与 Track 选择</a></li>
         </ol>
       </nav>
 
       <div class="lead-note">
-        <h2>申请逻辑</h2>
-        <p>Offer-Core 的核心理念很明确：申请的成功，80% 取决于项目选择的精准度。一个正确的选择，能最大化放大你的背景优势，并更直接地连接理想职业路径。</p>
-        <p>我们的判断不是基于中介经验或官网文案，而是来自全球头部对冲基金、投行、咨询与 Tech 公司一线从业者的行业视角。</p>
-        <p>这意味着我们提供的不是泛化申请支持，而是站在目标行业招聘逻辑上的项目判断、叙事设计与执行落地。</p>
+        <h2>课程概览</h2>
+        <p>AlphaEdge Q-Core 提供两条适配不同阶段的量化求职路径：校招冲刺 Track 与低年级成长 Track。</p>
+        <p>两个 Track 均包含课程 A 技术训练营、独家真题题库、1v1 答疑支持与 3 年有效期。</p>
+        <p>两者的差异主要集中在课程 B 的交付深度：校招冲刺版聚焦短周期求职落地，低年级成长版增加更长期的辅导与国内私募实习机会。</p>
       </div>
     </div>
 
     <section class="section" id="why">
       <div class="section-head">
         <div>
-          <h2>为什么选择 Offer-Core</h2>
-          <p class="section-subcopy">这不是一套标准化流水线申请服务，而是一套面向 Quant MFE、投行与咨询商科、Tech 数据科学方向的策略型申请方案。</p>
+          <h2>为什么选择 AlphaEdge？最精准的面试准备方案</h2>
         </div>
       </div>
       <div class="card-grid grid-4">
         <article class="card">
-          <h3>行业视角项目判断</h3>
-          <p>项目判断来自真实行业视角，而不是学校官网信息或泛化中介经验。</p>
+          <h3>真题驱动体系</h3>
+          <p>全程围绕"面试官真正会问什么"设计，覆盖 90% 面试必考点，拒绝低效刷题，直击核心考点。</p>
         </article>
         <article class="card">
-          <h3>职业导向文书设计</h3>
-          <p>围绕你的真实经历与目标岗位，构建能被招生委员会和未来雇主同时认可的叙事逻辑。</p>
+          <h3>实战经验支撑</h3>
+          <p>导师拥有 Top 投行与 Hedge Fund 5 年量化研究经验，曾任面试官，深谙面试官评分细节与录用标准。</p>
         </article>
         <article class="card">
-          <h3>全流程执行支持</h3>
-          <p>从 CV、PS、Open Questions 到推荐信策略、网申推进与 Offer 决策，完整覆盖。</p>
+          <h3>1v1 深度定制</h3>
+          <p>根据学员背景与短板重点突破，灵活调整内容比重，提供最适合你的个性化辅导方案。</p>
         </article>
         <article class="card">
-          <h3>高度仿真面试训练</h3>
-          <p>针对北美 top MFE / 商科、英国 G5 quant / 商科，以及目标明确的 Tech 数据科学项目提供针对性申请与面试支持。</p>
+          <h3>高效备战</h3>
+          <p>省去机构营销成本，将资源全部投入在真题体系与深度辅导，提供市面上最高性价比的求职解决方案。</p>
         </article>
       </div>
     </section>
-    <section class="section" id="services">
+
+    <section class="section" id="architecture">
       <div class="section-head">
         <div>
-          <h2>服务内容与执行路径</h2>
-          <p class="section-subcopy">Offer-Core 的服务逻辑很清晰：先做项目判断，再进入文书设计与全流程执行，用更精准的申请路径服务最终职业结果。</p>
+          <h2>双轨课程架构：校招冲刺版与低年级成长版</h2>
+        </div>
+      </div>
+      <div class="card-grid grid-3">
+        <article class="card">
+          <div class="meta">Track 1｜校招冲刺版</div>
+          <h3>完整保留现有校招冲刺交付</h3>
+          <ul class="plain-list">
+            <li>课程 A：14 小时 1v1 技术训练营。</li>
+            <li>课程 B：6 小时 1v1 面试准备与求职辅导。</li>
+            <li>包含简历修改、项目包装、Mock Interview 与持续答疑支持。</li>
+            <li>附带独家高频真题题库，覆盖真实量化面试高频考点。</li>
+            <li>适合已经进入校招窗口、需要尽快完成投递与面试冲刺的人群。</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="meta">Track 2｜低年级成长版</div>
+          <h3>更长周期的成长型求职方案</h3>
+          <ul class="plain-list">
+            <li>课程 A：同样包含 14 小时 1v1 技术训练营。</li>
+            <li>课程 B：从 6 小时扩展到 10 小时 1v1 辅导。</li>
+            <li>在简历修改、项目包装和 Mock Interview 之外，增加更长期的项目打磨、表达训练与路径规划。</li>
+            <li>附带 1 段国内私募实习，正规录取，背调没有任何问题，可线下也可 remote。</li>
+            <li>适合低年级学生提前 1-2 年布局校招，先补齐能力与履历，再进入正式求职周期。</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="meta">共同交付</div>
+          <h3>两个 Track 共享的核心训练与服务</h3>
+          <ul class="plain-list">
+            <li>课程 A 由数学与金融数学、统计与机器学习、算法与编程三大模块构成。</li>
+            <li>全程采用 1v1 交付方式，围绕真实岗位考点做针对性训练。</li>
+            <li>独家高频真题题库全部来自真实面试积累，非网传、非拼凑。</li>
+            <li>提供持续 1v1 答疑支持，帮助学员把训练内容转化为可复用的面试能力。</li>
+            <li>课程有效期 3 年，支持按个人节奏暂停与恢复。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="camp">
+      <div class="section-head">
+        <div>
+          <h2>课程 A - Technical Interview 痛点全攻略</h2>
         </div>
       </div>
 
-      <div class="service-flow">
-        <article class="service-step">
-          <h3>1. 精准项目选择（Offer-Core 的核心优势）</h3>
-          <p>Offer-Core 的项目判断，来自 <strong>真实行业视角</strong>，而非中介经验或学校官网信息。</p>
-          <p>我们的导师不仅毕业于名校，更活跃在全球头部对冲基金 / 投行 / 咨询 / Tech 公司，能够提供 <strong>来自招聘与行业内部的一线判断</strong>。他们对目标项目的认识，是全方位、细节化的：</p>
+      <div class="curriculum-map">
+        <div class="curriculum-anchor">
+          <div class="meta">共同技术底座</div>
+          <h3>Technical Interview 痛点全覆盖</h3>
+          <p>14 小时 1v1 系统训练</p>
+          <p>保证覆盖所有 Quant / Trader 面试过程中的 technical interview 核心知识点，并进行针对性训练。</p>
+        </div>
+        <div class="curriculum-brace" aria-hidden="true">{</div>
+        <div class="curriculum-stack">
+          <article class="curriculum-unit">
+            <div class="curriculum-unit-head">
+              <h3>数学 &amp; 金融数学</h3>
+              <span class="curriculum-hour">5h</span>
+            </div>
+            <ul class="plain-list">
+              <li>概率论与衍生 brain teaser 解题框架</li>
+              <li>随机过程到 BS 模型深度解析</li>
+              <li>期权定价直觉与严谨推导</li>
+            </ul>
+          </article>
+          <article class="curriculum-unit">
+            <div class="curriculum-unit-head">
+              <h3>统计 &amp; 机器学习</h3>
+              <span class="curriculum-hour">4h</span>
+            </div>
+            <ul class="plain-list">
+              <li>从线性代数角度理解线性回归</li>
+              <li>机器学习理论与核心模型</li>
+              <li>高频统计题型与变式训练</li>
+            </ul>
+          </article>
+          <article class="curriculum-unit">
+            <div class="curriculum-unit-head">
+              <h3>算法 &amp; 编程</h3>
+              <span class="curriculum-hour">5h</span>
+            </div>
+            <ul class="plain-list">
+              <li>高频算法与数据结构梳理</li>
+              <li>对标顶级买方技术面的 live coding 训练</li>
+              <li>Python / C++ 语法基础与数值计算实现</li>
+            </ul>
+          </article>
+        </div>
+      </div>
 
-          <p class="section-subcopy mobile-only">手机端会自动切换为卡片化展示，方便直接阅读。</p>
+      <div class="note-block">
+        <p>课程 A 是两个 Track 共同使用的 technical interview 核心训练模块，全部采用 1v1 方式交付。</p>
+        <p>目标是把 Quant / Trader 面试中的核心 technical interview 知识点系统覆盖，并针对不同岗位考法做定向训练。</p>
+        <p>我们强调的不只是刷题数量，而是把高频题型背后的知识框架、建模直觉与代码能力真正搭起来。</p>
+      </div>
 
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>维度</th>
-                  <th>传统中介 / DIY</th>
-                  <th>Offer-Core</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-label="维度">课程设置</td>
-                  <td data-label="传统中介 / DIY">官网课程列表</td>
-                  <td data-label="Offer-Core">哪些课是“硬核干货”？技术栈是否与业界接轨？</td>
-                </tr>
-                <tr>
-                  <td data-label="维度">就业资源</td>
-                  <td data-label="传统中介 / DIY">官方就业报告</td>
-                  <td data-label="Offer-Core">校友真实去向？内推与校招中的实际影响力？</td>
-                </tr>
-                <tr>
-                  <td data-label="维度">项目口碑</td>
-                  <td data-label="传统中介 / DIY">综合排名</td>
-                  <td data-label="Offer-Core">在 Quant、投行 / 咨询商科、Tech 数据科学招聘视角中的真实地位？是否在 Target School List 上？</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+      <div class="divider"></div>
 
-          <p class="service-summary">我们帮你构建一张精准的“项目地图”，找到职业回报率最高的申请路径。</p>
-        </article>
-
-        <article class="service-step">
-          <h3>2. 定制化文书</h3>
-          <p>在完成项目精准定位后，我们才进入文书阶段。</p>
+      <article class="module-detail">
+        <div class="image-panel">
+          <img src="./ppt_assets/image13.png" alt="数学与金融数学课程图示">
+        </div>
+        <div class="card">
+          <div class="meta">模块一</div>
+          <h3>数学 &amp; 金融数学 5h</h3>
           <ul class="plain-list">
-            <li><strong>深度拆解项目偏好（求职导向 vs 学术导向）</strong></li>
-            <li><strong>围绕你的真实经历，构建可被招生委员会认可的叙事逻辑</strong></li>
-            <li><strong>避免模板化、包装型文书，强调“为什么你适合这个项目”</strong></li>
+            <li>概率论与衍生brain teaser(解题trick总结）</li>
+            <li>随机过程到BS 模型深度解析</li>
+            <li>期权定价直觉与严谨推导</li>
+            <li>5小时专精概率和brain teaser原型题目</li>
+            <li>题目35道，速通100+面试题</li>
+            <li>（绿皮书/红皮书/JS citadel等真人面试积累题库）</li>
           </ul>
-          <p class="service-summary">我们会基于对目标项目偏好的深刻理解，将你的个人经历与项目特质更精准地结合，让申请材料更有辨识度。</p>
-        </article>
+        </div>
+      </article>
 
-        <article class="service-step">
-          <h3>3. 全流程申请支持</h3>
-          <p>我们提供从准备到录取的一站式申请执行支持，让你专注于最重要的事情。</p>
+      <div class="divider"></div>
+
+      <article class="module-detail">
+        <div class="image-panel">
+          <img src="./ppt_assets/image14.png" alt="统计与机器学习课程图示">
+        </div>
+        <div class="card">
+          <div class="meta">模块二</div>
+          <h3>统计 &amp; 机器学习 4h</h3>
           <ul class="plain-list">
-            <li>
-              <strong>协同材料制作（CV / Open Questions / 推荐信）</strong>
-              <span class="detail-line">围绕核心 PS，同步设计配套材料，并指导推荐信策略。</span>
-            </li>
-            <li>
-              <strong>专业面试指导（Offer-Core 独家优势）</strong>
-              <span class="detail-line">我们针对北美 top MFE / 商科、英国 G5 quant / 商科，以及目标明确的 Tech 数据科学项目提供更贴近项目要求的模拟面试与针对性辅导。</span>
-            </li>
-            <li>
-              <strong>申请流程管理</strong>
-              <span class="detail-line">覆盖网申递交提醒、进度跟进、录取后 Argue 与 Offer 决策，帮助你规避繁琐流程与关键失误。</span>
-            </li>
+            <li>从线性代数角度理解线性回归</li>
+            <li>机器学习理论</li>
+            <li>必考模型</li>
+            <li>4小时覆盖基础题26道，变式延伸75题</li>
+            <li>（绿皮书/红皮书/JS citadel等真人面试积累题库）</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="divider"></div>
+
+      <article class="module-detail">
+        <div class="image-panel">
+          <img src="./ppt_assets/image15.png" alt="算法与编程课程图示">
+        </div>
+        <div class="card">
+          <div class="meta">模块三</div>
+          <h3>算法 &amp; 编程 5h</h3>
+          <ul class="plain-list">
+            <li>高频算法与数据结构梳理（覆盖典型 Leetcode 考察类型）</li>
+            <li>对标顶级买方技术面的 live coding 训练</li>
+            <li>Python / C++ 语法基础与数值计算实现</li>
+            <li>5小时速通leetcode55道quant/trader面试必刷题，覆盖衍生题目100道。</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="advanced">
+      <div class="section-head">
+        <div>
+          <h2>课程 B - 面试与求职交付详解</h2>
+        </div>
+      </div>
+      <div class="card-grid grid-2">
+        <article class="card">
+          <div class="meta">校招冲刺 Track</div>
+          <h3>6 小时 1v1 面试冲刺交付</h3>
+          <ul class="plain-list">
+            <li>前 3 小时聚焦简历修改与项目包装，根据现有背景改写或增添最相关的项目经历。</li>
+            <li>后 3 小时进行 1v1 Mock Interview，重点覆盖深挖简历、live market making game、live coding 等 HF / PROP onsite 面试必考题，并基于现有面试安排进行针对公司与岗位的定向 mock。</li>
+            <li>通过更贴合目标岗位的项目呈现与叙事结构设计，极大提高简历通过的概率。</li>
+            <li>适合已有基础、需要快速把简历、项目和面试表现拉满的同学。</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="meta">低年级成长 Track</div>
+          <h3>10 小时 1v1 成长辅导 + 国内私募实习</h3>
+          <ul class="plain-list">
+            <li>保留简历修改、项目包装与 Mock Interview 的核心交付，并把整体辅导时长扩展至 10 小时。</li>
+            <li>增加更长期的项目打磨、表达训练、阶段复盘与求职路径规划。</li>
+            <li>附带 1 段国内私募实习：正规录取，背调没有任何问题，可线下也可 remote。</li>
+            <li>适合低年级学生提前完成能力积累、履历补强与正式实习布局。</li>
           </ul>
         </article>
       </div>
@@ -866,38 +787,19 @@
     <section class="section" id="team">
       <div class="section-head">
         <div>
-          <h2>服务团队</h2>
-          <p class="section-subcopy">Offer-Core 只由活跃在行业一线的导师组成，不做流水线申请。策略判断、文书匹配与地区方向分工清晰。</p>
+          <h2>导师团队</h2>
         </div>
       </div>
-
-      <div class="card-grid grid-3">
+      <div class="card-grid grid-2">
         <article class="card">
-          <div class="meta">全程申请负责人</div>
-          <h3>James / Ethan / Ryan / Stepine 等</h3>
-          <ul class="plain-list">
-            <li>负责全程项目匹配、文书撰写与面试辅导，覆盖申请执行中的关键环节。</li>
-            <li>会根据每位学员的背景、目标项目与申请节奏，指定最合适的负责人主导推进。</li>
-            <li>确保项目判断、文书表达与后续面试准备在同一条逻辑链里完成。</li>
-          </ul>
+          <div class="meta">Tuu 老师</div>
+          <h3>课程设计者 &amp; 课程 B 负责人</h3>
+          <p>在 Top 投行与 Hedge Fund 拥有6年量化研究经验。面试过几乎所有顶级机构，拿过多个 Offer，深谙面试流程。承担组里面试官工作，参与校招筛选与技术面试。深知什么样的候选人会被 Pick up，也知道面试官的评分细节。亲自设计全部课程体系与真题题库，严格基于真实高频考点。</p>
         </article>
         <article class="card">
-          <div class="meta">项目选择与就业方向 Consulting</div>
-          <h3>Tuu / Stella</h3>
-          <ul class="plain-list">
-            <li>作为全程申请负责人的补充支持，Tuu 与 Stella 会从不同方向提供第二视角与交叉判断。</li>
-            <li>Tuu 侧重 Quant MFE 与 Tech 数据科学方向，Stella 侧重投行与咨询商科方向，补足不同项目路径下的判断维度。</li>
-            <li>帮助学员从项目匹配、就业方向与长期结果三个层面获得更完整的多视角建议。</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="meta">档案简历与 Tracker</div>
-          <h3>申请执行小助手</h3>
-          <ul class="plain-list">
-            <li>在申请项目确认后，协助整理档案、简历版本与申请材料清单。</li>
-            <li>通过 tracker 持续提示申请 ddl、材料进度与关键时间节点。</li>
-            <li>把执行层信息及时同步给学员，避免遗漏影响整体申请节奏。</li>
-          </ul>
+          <div class="meta">课程 A 导师团队</div>
+          <h3>技术能力训练营专家组</h3>
+          <p>来自全球顶尖高校的PhD 毕业生。国际数学/编程竞赛获奖者（IOI, IMO等）。与 Tuu 导师多轮共创并持续精修课程框架与题库，确保只讲面试必考题。确保学员在硬实力层面达到一线量化岗位的准入标准。</p>
         </article>
       </div>
     </section>
@@ -905,111 +807,86 @@
     <section class="section" id="plans">
       <div class="section-head">
         <div>
-          <h2>价格与申请方案</h2>
-          <p class="section-subcopy">以下基础价格对应不含面试项目的申请方案。若项目本身包含面试环节，我们会根据项目类型追加专项面试辅导，保证准备强度和项目要求匹配。</p>
+          <h2>双轨课程方案与服务保障</h2>
         </div>
       </div>
-
-      <p class="section-subcopy mobile-only">手机端会自动切换为卡片化展示，方便直接阅读。</p>
 
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>服务类型</th>
-              <th>适用地区 / 条件</th>
-              <th>服务内容</th>
-              <th>项目上限</th>
-              <th>价格（RMB）</th>
+              <th>模块</th>
+              <th>适合人群</th>
+              <th>交付内容</th>
+              <th>价格</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td data-label="服务类型">标准申请方案</td>
-              <td data-label="适用地区 / 条件">英国 + 欧洲</td>
-              <td data-label="服务内容">项目选择 + 对应文书 + 全流程申请支持</td>
-              <td data-label="项目上限">5 个</td>
-              <td class="price" data-label="价格（RMB）">¥28,800</td>
+              <td>课程 A：技术能力训练营</td>
+              <td>两个 Track 共同模块</td>
+              <td>14 小时 1v1 + 独家真题题库</td>
+              <td class="price">¥28,800</td>
             </tr>
             <tr>
-              <td data-label="服务类型">标准申请方案</td>
-              <td data-label="适用地区 / 条件">单独美国</td>
-              <td data-label="服务内容">项目选择 + 对应文书 + 全流程申请支持</td>
-              <td data-label="项目上限">5 个</td>
-              <td class="price" data-label="价格（RMB）">¥28,800</td>
+              <td>校招冲刺Track课程 B</td>
+              <td>即将参加校招、秋招或近期投递的人群</td>
+              <td>6 小时 1v1 + 不限时答疑</td>
+              <td class="price">¥28,000</td>
             </tr>
             <tr>
-              <td data-label="服务类型">标准申请方案</td>
-              <td data-label="适用地区 / 条件">香港 / 新加坡</td>
-              <td data-label="服务内容">项目选择 + 对应文书 + 全流程申请支持</td>
-              <td data-label="项目上限">3 个</td>
-              <td class="price" data-label="价格（RMB）">¥19,800</td>
+              <td>校招冲刺Track总方案：A + B</td>
+              <td>适合希望在短周期内完成完整校招冲刺的人群</td>
+              <td>课程 A + 校招冲刺Track课程 B</td>
+              <td class="price">¥49,800</td>
             </tr>
             <tr>
-              <td data-label="服务类型">全球联申方案</td>
-              <td data-label="适用地区 / 条件">英 / 美 / 港 / 新 / 欧</td>
-              <td data-label="服务内容">项目选择 + 对应文书 + 全流程申请支持</td>
-              <td data-label="项目上限">7 个</td>
-              <td class="price" data-label="价格（RMB）">¥36,800</td>
+              <td>低年级成长Track课程 B</td>
+              <td>低年级学生，希望提前 1-2 年布局校招的人群</td>
+              <td>10 小时 1v1 + 更长期的项目打磨与路径规划 + 1 段私募实习</td>
+              <td class="price">¥58,000</td>
             </tr>
             <tr>
-              <td data-label="服务类型">含面试项目加项</td>
-              <td data-label="适用地区 / 条件">TOP MFE / 牛津 MCF、G5 MFE / LBS / HEC 等含面试项目</td>
-              <td data-label="服务内容">2h 面试辅导，覆盖对应项目的核心面试要求与针对性训练</td>
-              <td data-label="项目上限">—</td>
-              <td class="price" data-label="价格（RMB）">+¥3,000</td>
-            </tr>
-            <tr>
-              <td data-label="服务类型">Baruch 面试专项加项</td>
-              <td data-label="适用地区 / 条件">Baruch</td>
-              <td data-label="服务内容">4h 面试辅导，按 Baruch 面试风格做更高强度的专项准备</td>
-              <td data-label="项目上限">—</td>
-              <td class="price" data-label="价格（RMB）">+¥10,000</td>
-            </tr>
-            <tr>
-              <td data-label="服务类型">背景提升加项</td>
-              <td data-label="适用地区 / 条件">适用 Quant MFE、投行与咨询商科、Tech 数据科学方向的无实习申请者</td>
-              <td data-label="服务内容">私募实习经历，正规录取流程，可 remote 也可线下，背调无忧</td>
-              <td data-label="项目上限">—</td>
-              <td class="price" data-label="价格（RMB）">+¥20,000</td>
+              <td>低年级成长Track总方案：A + B</td>
+              <td>适合希望提前完成能力积累、履历补强与实习布局的人群</td>
+              <td>课程 A + 低年级成长Track课程 B</td>
+              <td class="price">¥79,800</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div class="chips">
-        <div class="chip">1. 顶级项目出身导师，具备 Top 项目交付能力：专注申请 UCB MFE、Princeton MFE、Baruch、HEC、LBS、Oxford MFE/MCF、Yale AM、MIT Fin 等项目，并沉淀出一套可复制的高难度申请方法论。</div>
-        <div class="chip">2. 所有申请策略围绕职业结果设计：业界导师以目标岗位为核心，反向规划申请路径，确保项目选择、文书表达与后续准备服务同一职业目标。</div>
-        <div class="chip">3. 背景提升（加项）：针对无相关实习背景的申请者，提供私募及相关领域的实践机会，通过规范录取流程进入项目，支持 remote 或 onsite 参与，所有经历均可验证，适用于面试及背景调查。</div>
+        <div class="chip">我们团队专注 quant / trader 求职，核心成员均来自一线业内。交付内容对标或者超过市面 10w-30w 的 package，欢迎对比和深度了解。传统求职机构的问题在于：导师专业度不可控，而我们从源头解决这个问题。</div>
       </div>
     </section>
 
     <section class="section" id="cta">
       <div class="section-head">
         <div>
-          <h2>如何开始合作</h2>
+          <h2>报名方式与 Track 选择</h2>
         </div>
       </div>
 
       <div class="card-grid grid-2">
         <article class="cta-box">
-          <h3>适合这样的申请者</h3>
+          <h3>如何选择适合自己的 Track</h3>
           <ul class="plain-list">
-            <li>目标明确指向 Quant MFE、投行与咨询商科、Tech 数据科学相关路径。</li>
-            <li>不想走泛化中介流程，希望先把项目判断做对。</li>
-            <li>希望文书、申请与后续面试训练都围绕职业结果服务。</li>
+            <li>如果你即将进入校招周期，直接选择现有校招冲刺 Track。</li>
+            <li>如果你还是低年级学生，希望提前布局履历与实习，再选择低年级成长 Track。</li>
+            <li>联系 Tuu 老师沟通背景，我们会基于当前年级、目标岗位和准备周期给出建议。</li>
           </ul>
         </article>
         <article class="card">
-          <div class="meta">合作路径</div>
+          <div class="meta">完整交付回顾</div>
           <ul class="plain-list">
-            <li>先做背景沟通，明确职业目标、申请地区与可用经历。</li>
-            <li>再确定最优项目路径，之后进入文书与申请执行。</li>
-            <li>如果项目包含面试，再接入对应真题库与模拟面试支持。</li>
-            <li>最终把申请、录取与 Offer 决策串成一条完整路径。</li>
+            <li>校招冲刺 Track：课程 A + 课程 B 6 小时 + 简历修改 + 项目包装 + Mock Interview。</li>
+            <li>低年级成长 Track：课程 A + 课程 B 10 小时 + 更长期的求职辅导 + 国内私募实习。</li>
+            <li>两个 Track 均共享独家真题题库、1v1 答疑支持与 3 年有效期。</li>
+            <li>所有辅导继续采用 1v1 方式交付，围绕真实量化岗位面试要求展开。</li>
           </ul>
           <div class="note-block">
-            <p>Offer-Core 适合希望用更专业的判断，换取更高职业回报率申请结果的人。</p>
+            <p>先选对 Track，再用更匹配你阶段的方案去完成量化求职准备。</p>
           </div>
         </article>
       </div>
@@ -1021,4 +898,3 @@
   </div>
 </body>
 </html>
-
