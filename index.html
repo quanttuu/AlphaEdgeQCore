@@ -247,6 +247,97 @@
       padding: 20px 18px;
     }
 
+    .curriculum-map {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.44fr) 64px minmax(0, 1fr);
+      gap: 16px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+
+    .curriculum-anchor {
+      background: linear-gradient(165deg, rgba(23, 60, 67, 0.96), rgba(45, 127, 132, 0.9));
+      color: #f8f4ee;
+      border-radius: 24px;
+      padding: 24px 22px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .curriculum-anchor .meta {
+      align-self: flex-start;
+      background: rgba(255,255,255,0.12);
+      color: #f8f4ee;
+      border: 1px solid rgba(255,255,255,0.14);
+      margin-bottom: 14px;
+    }
+
+    .curriculum-anchor h3 {
+      font-size: 1.45rem;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      color: #fffaf3;
+    }
+
+    .curriculum-anchor p {
+      color: rgba(248, 244, 238, 0.84);
+      margin-bottom: 8px;
+    }
+
+    .curriculum-brace {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal);
+      font-family: var(--font-title);
+      font-size: clamp(8rem, 16vw, 13rem);
+      line-height: 0.76;
+      transform: translateY(-4px);
+      user-select: none;
+    }
+
+    .curriculum-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .curriculum-unit {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 18px 18px 16px;
+    }
+
+    .curriculum-unit-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .curriculum-unit-head h3 {
+      margin: 0;
+      color: var(--deep);
+      font-size: 1.08rem;
+    }
+
+    .curriculum-hour {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 52px;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: rgba(45, 127, 132, 0.12);
+      color: var(--deep);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
     .card h3,
     .card h4 {
       margin-bottom: 10px;
@@ -419,12 +510,17 @@
       .module-detail,
       .grid-4,
       .grid-3,
-      .grid-2 {
+      .grid-2,
+      .curriculum-map {
         grid-template-columns: 1fr;
       }
 
       .section-head {
         flex-direction: column;
+      }
+
+      .curriculum-brace {
+        display: none;
       }
     }
 
@@ -446,39 +542,38 @@
 <body>
   <div class="page">
     <header class="hero" id="top">
-      <div class="hero-tag">产品手册</div>
+      <div class="hero-tag">AlphaEdge Q-Core</div>
       <h1>Q-Core：AlphaEdge量化面试辅导课程</h1>
-      <p>针对Quant/Trader的系统化面试准备方案</p>
+      <p>双轨培养方案：面向即将校招的冲刺版本，以及面向低年级学生的长期成长版本。</p>
     </header>
 
     <div class="top-grid">
       <nav class="toc">
-        <h2>Contents</h2>
+        <h2>目录</h2>
         <ol class="toc-list">
           <li><a href="#why">为什么选择 AlphaEdge？最精准的面试准备方案</a></li>
-          <li><a href="#architecture">课程体系架构：从技术夯实到面试冲刺</a></li>
+          <li><a href="#architecture">双轨课程架构：校招冲刺版与低年级成长版</a></li>
           <li><a href="#camp">课程 A - 技术能力训练营详解</a></li>
-          <li><a href="#advanced">课程 B - 进阶面试准备详解</a></li>
+          <li><a href="#advanced">课程 B - 面试与求职交付详解</a></li>
           <li><a href="#team">导师团队：实战与学术的结合</a></li>
-          <li><a href="#plans">课程方案与服务保障</a></li>
-          <li><a href="#cta">开启你的量化职业之路</a></li>
+          <li><a href="#plans">双轨课程方案与服务保障</a></li>
+          <li><a href="#cta">报名方式与 Track 选择</a></li>
         </ol>
       </nav>
 
       <div class="lead-note">
-        <h2>Manual</h2>
-        <p>本页用于产品手册展示。</p>
-        <p>内容按原 PPT 文案进行网页化排版，保留原有信息结构，不做概念改写。</p>
+        <h2>课程概览</h2>
+        <p>AlphaEdge Q-Core 提供两条适配不同阶段的量化求职路径：校招冲刺 Track 与低年级成长 Track。</p>
+        <p>两个 Track 均包含课程 A 技术训练营、独家真题题库、1v1 答疑支持与 3 年有效期。</p>
+        <p>两者的差异主要集中在课程 B 的交付深度：校招冲刺版聚焦短周期求职落地，低年级成长版增加更长期的辅导与国内私募实习机会。</p>
       </div>
     </div>
 
     <section class="section" id="why">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Section 01</div>
           <h2>为什么选择 AlphaEdge？最精准的面试准备方案</h2>
         </div>
-        <div class="section-index">Slide 2</div>
       </div>
       <div class="card-grid grid-4">
         <article class="card">
@@ -503,40 +598,41 @@
     <section class="section" id="architecture">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Section 02</div>
-          <h2>课程体系架构：从技术夯实到面试冲刺</h2>
+          <h2>双轨课程架构：校招冲刺版与低年级成长版</h2>
         </div>
-        <div class="section-index">Slide 3</div>
       </div>
       <div class="card-grid grid-3">
         <article class="card">
-          <div class="meta">课程 A：技术能力训练营</div>
-          <h3>14 小时系统训练</h3>
+          <div class="meta">Track 1｜校招冲刺版</div>
+          <h3>完整保留现有校招冲刺交付</h3>
           <ul class="plain-list">
-            <li>围绕量化岗位技术需求：</li>
-            <li>数学 &amp; 金融数学 5h</li>
-            <li>统计建模 &amp; 机器学习 4h</li>
-            <li>算法 &amp; 编程 5h</li>
-            <li>系统性拆解知识 + 面试考点映射</li>
-            <li>独家高频真题题库，全部来自真人面试积累，非网传、非拼凑。</li>
+            <li>课程 A：14 小时 1v1 技术训练营。</li>
+            <li>课程 B：6 小时 1v1 面试准备与求职辅导。</li>
+            <li>包含简历修改、项目包装、Mock Interview 与持续答疑支持。</li>
+            <li>附带独家高频真题题库，覆盖真实量化面试高频考点。</li>
+            <li>适合已经进入校招窗口、需要尽快完成投递与面试冲刺的人群。</li>
           </ul>
         </article>
         <article class="card">
-          <div class="meta">课程 B：进阶面试准备</div>
-          <h3>6 小时 1v1 辅导</h3>
+          <div class="meta">Track 2｜低年级成长版</div>
+          <h3>更长周期的成长型求职方案</h3>
           <ul class="plain-list">
-            <li>针对目标岗位重写简历结构</li>
-            <li>挖掘技术亮点与项目包装</li>
-            <li>全流程模拟面试 (Mock)</li>
+            <li>课程 A：同样包含 14 小时 1v1 技术训练营。</li>
+            <li>课程 B：从 6 小时扩展到 10 小时 1v1 辅导。</li>
+            <li>在简历修改、项目包装和 Mock Interview 之外，增加更长期的项目打磨、表达训练与路径规划。</li>
+            <li>附带 1 段国内私募实习，正规录取，背调没有任何问题，可线下也可 remote。</li>
+            <li>适合低年级学生提前 1-2 年布局校招，先补齐能力与履历，再进入正式求职周期。</li>
           </ul>
         </article>
         <article class="card">
-          <div class="meta">A+B 全流程跑通</div>
-          <h3>20 小时完整方案</h3>
+          <div class="meta">共同交付</div>
+          <h3>两个 Track 共享的核心训练与服务</h3>
           <ul class="plain-list">
-            <li>从基础到面试冲刺完整闭环</li>
-            <li>全程 1v1 跟跑与答疑</li>
-            <li>最高性价比的求职解决方案</li>
+            <li>课程 A 由数学与金融数学、统计与机器学习、算法与编程三大模块构成。</li>
+            <li>全程采用 1v1 交付方式，围绕真实岗位考点做针对性训练。</li>
+            <li>独家高频真题题库全部来自真实面试积累，非网传、非拼凑。</li>
+            <li>提供持续 1v1 答疑支持，帮助学员把训练内容转化为可复用的面试能力。</li>
+            <li>课程有效期 3 年，支持按个人节奏暂停与恢复。</li>
           </ul>
         </article>
       </div>
@@ -545,46 +641,59 @@
     <section class="section" id="camp">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Section 03</div>
-          <h2>课程 A - 技术能力训练营详解</h2>
+          <h2>课程 A - Technical Interview 痛点全攻略</h2>
         </div>
-        <div class="section-index">Slides 4 - 7</div>
       </div>
 
-      <div class="card-grid grid-3">
-        <article class="card">
-          <h3>数学 &amp; 金融数学</h3>
-          <ul class="plain-list">
-            <li>概率论与衍生brain teaser(解题trick总结）</li>
-            <li>随机过程到BS 模型深度解析</li>
-            <li>期权定价直觉与严谨推导</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>统计 &amp; 机器学习</h3>
-          <div class="meta">4h</div>
-          <ul class="plain-list">
-            <li>从线性代数角度理解线性回归</li>
-            <li>机器学习理论</li>
-            <li>必考模型</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>算法 &amp; 编程</h3>
-          <div class="meta">5h</div>
-          <ul class="plain-list">
-            <li>高频算法与数据结构梳理（覆盖典型 Leetcode 考察类型）</li>
-            <li>对标顶级买方技术面的 live coding 训练</li>
-            <li>Python / C++ 语法基础与数值计算实现</li>
-          </ul>
-        </article>
+      <div class="curriculum-map">
+        <div class="curriculum-anchor">
+          <div class="meta">共同技术底座</div>
+          <h3>Technical Interview 痛点全覆盖</h3>
+          <p>14 小时 1v1 系统训练</p>
+          <p>保证覆盖所有 Quant / Trader 面试过程中的 technical interview 核心知识点，并进行针对性训练。</p>
+        </div>
+        <div class="curriculum-brace" aria-hidden="true">{</div>
+        <div class="curriculum-stack">
+          <article class="curriculum-unit">
+            <div class="curriculum-unit-head">
+              <h3>数学 &amp; 金融数学</h3>
+              <span class="curriculum-hour">5h</span>
+            </div>
+            <ul class="plain-list">
+              <li>概率论与衍生 brain teaser 解题框架</li>
+              <li>随机过程到 BS 模型深度解析</li>
+              <li>期权定价直觉与严谨推导</li>
+            </ul>
+          </article>
+          <article class="curriculum-unit">
+            <div class="curriculum-unit-head">
+              <h3>统计 &amp; 机器学习</h3>
+              <span class="curriculum-hour">4h</span>
+            </div>
+            <ul class="plain-list">
+              <li>从线性代数角度理解线性回归</li>
+              <li>机器学习理论与核心模型</li>
+              <li>高频统计题型与变式训练</li>
+            </ul>
+          </article>
+          <article class="curriculum-unit">
+            <div class="curriculum-unit-head">
+              <h3>算法 &amp; 编程</h3>
+              <span class="curriculum-hour">5h</span>
+            </div>
+            <ul class="plain-list">
+              <li>高频算法与数据结构梳理</li>
+              <li>对标顶级买方技术面的 live coding 训练</li>
+              <li>Python / C++ 语法基础与数值计算实现</li>
+            </ul>
+          </article>
+        </div>
       </div>
 
       <div class="note-block">
-        <p>覆盖 grads 及 2–3 年 junior 跳槽阶段的核心面试题。</p>
-        <p>内容基于一线量化岗位实际考察范围构建。</p>
-        <p>从题目抽象为知识框架，训练进入团队后的核心能力。</p>
-        <p>包括概率建模、误差分析、优化方法与代码规范，这些均为 PM 与 senior 在实际工作中讨论与评估的内容。</p>
+        <p>课程 A 是两个 Track 共同使用的 technical interview 核心训练模块，全部采用 1v1 方式交付。</p>
+        <p>目标是把 Quant / Trader 面试中的核心 technical interview 知识点系统覆盖，并针对不同岗位考法做定向训练。</p>
+        <p>我们强调的不只是刷题数量，而是把高频题型背后的知识框架、建模直觉与代码能力真正搭起来。</p>
       </div>
 
       <div class="divider"></div>
@@ -594,7 +703,7 @@
           <img src="./ppt_assets/image13.png" alt="数学与金融数学课程图示">
         </div>
         <div class="card">
-          <div class="meta">Slide 5</div>
+          <div class="meta">模块一</div>
           <h3>数学 &amp; 金融数学 5h</h3>
           <ul class="plain-list">
             <li>概率论与衍生brain teaser(解题trick总结）</li>
@@ -614,7 +723,7 @@
           <img src="./ppt_assets/image14.png" alt="统计与机器学习课程图示">
         </div>
         <div class="card">
-          <div class="meta">Slide 6</div>
+          <div class="meta">模块二</div>
           <h3>统计 &amp; 机器学习 4h</h3>
           <ul class="plain-list">
             <li>从线性代数角度理解线性回归</li>
@@ -633,7 +742,7 @@
           <img src="./ppt_assets/image15.png" alt="算法与编程课程图示">
         </div>
         <div class="card">
-          <div class="meta">Slide 7</div>
+          <div class="meta">模块三</div>
           <h3>算法 &amp; 编程 5h</h3>
           <ul class="plain-list">
             <li>高频算法与数据结构梳理（覆盖典型 Leetcode 考察类型）</li>
@@ -648,30 +757,28 @@
     <section class="section" id="advanced">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Section 04</div>
-          <h2>课程 B - 进阶面试准备详解</h2>
+          <h2>课程 B - 面试与求职交付详解</h2>
         </div>
-        <div class="section-index">Slide 8</div>
       </div>
       <div class="card-grid grid-2">
         <article class="card">
-          <div class="meta">简历修改 &amp; 项目包装</div>
-          <h3>3 小时深度打磨</h3>
+          <div class="meta">校招冲刺 Track</div>
+          <h3>6 小时 1v1 面试冲刺交付</h3>
           <ul class="plain-list">
-            <li>针对目标岗位（QR / QT / QD）重写简历结构，突出核心竞争力。</li>
-            <li>技术表达优化：将科研型经历转化为面试导向型叙事，直击面试官痛点。</li>
-            <li>无项目背景者：提供可落地的项目模板（高频仿真交易、因子研究、定价建模等）。</li>
-            <li>目标：输出 1 份高通过率的简历 + 完善的技术项目叙事。</li>
+            <li>前 3 小时聚焦简历修改与项目包装，根据现有背景改写或增添最相关的项目经历。</li>
+            <li>后 3 小时进行 1v1 Mock Interview，重点覆盖深挖简历、live market making game、live coding 等 HF / PROP onsite 面试必考题，并基于现有面试安排进行针对公司与岗位的定向 mock。</li>
+            <li>通过更贴合目标岗位的项目呈现与叙事结构设计，极大提高简历通过的概率。</li>
+            <li>适合已有基础、需要快速把简历、项目和面试表现拉满的同学。</li>
           </ul>
         </article>
         <article class="card">
-          <div class="meta">1v1 模拟面试 Mock</div>
-          <h3>3 小时实战演练</h3>
+          <div class="meta">低年级成长 Track</div>
+          <h3>10 小时 1v1 成长辅导 + 国内私募实习</h3>
           <ul class="plain-list">
-            <li>全流程模拟：简历问答 + 技术题 + Brain Teaser + Coding，还原真实场景。</li>
-            <li>即时点评反馈：优化答题逻辑与表达方式，提升沟通的专业度。</li>
-            <li>压力测试：提前熟悉面试节奏，暴露并解决潜在问题，消除紧张感。</li>
-            <li>目标：提升答题逻辑与表达，全方位提升面试通过率。</li>
+            <li>保留简历修改、项目包装与 Mock Interview 的核心交付，并把整体辅导时长扩展至 10 小时。</li>
+            <li>增加更长期的项目打磨、表达训练、阶段复盘与求职路径规划。</li>
+            <li>附带 1 段国内私募实习：正规录取，背调没有任何问题，可线下也可 remote。</li>
+            <li>适合低年级学生提前完成能力积累、履历补强与正式实习布局。</li>
           </ul>
         </article>
       </div>
@@ -680,10 +787,8 @@
     <section class="section" id="team">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Section 05</div>
-          <h2>导师团队：实战与学术的结合</h2>
+          <h2>导师团队</h2>
         </div>
-        <div class="section-index">Slide 9</div>
       </div>
       <div class="card-grid grid-2">
         <article class="card">
@@ -702,10 +807,8 @@
     <section class="section" id="plans">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Section 06</div>
-          <h2>课程方案与服务保障</h2>
+          <h2>双轨课程方案与服务保障</h2>
         </div>
-        <div class="section-index">Slide 10</div>
       </div>
 
       <div class="table-wrap">
@@ -713,69 +816,77 @@
           <thead>
             <tr>
               <th>模块</th>
-              <th>时长</th>
-              <th>核心内容</th>
+              <th>适合人群</th>
+              <th>交付内容</th>
               <th>价格</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>课程 A：技术能力训练营</td>
-              <td>14 小时1v1</td>
-              <td>数学、统计/机器学习、算法/编程 + 独家真题库</td>
+              <td>两个 Track 共同模块</td>
+              <td>14 小时 1v1 + 独家真题题库</td>
               <td class="price">¥28,800</td>
             </tr>
             <tr>
-              <td>课程 B：进阶面试准备</td>
-              <td>6 小时1v1 +项目指导<br>不限时答疑</td>
-              <td>简历修改、项目包装、模拟面试 Mock + 独家真题库</td>
+              <td>校招冲刺Track课程 B</td>
+              <td>即将参加校招、秋招或近期投递的人群</td>
+              <td>6 小时 1v1 + 不限时答疑</td>
               <td class="price">¥28,000</td>
             </tr>
             <tr>
-              <td>A+B 全流程跑通</td>
-              <td>20 小时+全流程不限时答疑</td>
-              <td>完整技术训练 + 面试准备 + 全程 1v1 跟跑</td>
-              <td class="price">¥49,800（88折）</td>
+              <td>校招冲刺Track总方案：A + B</td>
+              <td>适合希望在短周期内完成完整校招冲刺的人群</td>
+              <td>课程 A + 校招冲刺Track课程 B</td>
+              <td class="price">¥49,800</td>
+            </tr>
+            <tr>
+              <td>低年级成长Track课程 B</td>
+              <td>低年级学生，希望提前 1-2 年布局校招的人群</td>
+              <td>10 小时 1v1 + 更长期的项目打磨与路径规划 + 1 段私募实习</td>
+              <td class="price">¥58,000</td>
+            </tr>
+            <tr>
+              <td>低年级成长Track总方案：A + B</td>
+              <td>适合希望提前完成能力积累、履历补强与实习布局的人群</td>
+              <td>课程 A + 低年级成长Track课程 B</td>
+              <td class="price">¥79,800</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div class="chips">
-        <div class="chip">3 年有效期：支持暂停/恢复，适应您的求职节奏，提供长期的备战支持。</div>
-        <div class="chip">1v1 深度答疑：包含完整真题题库与持续的 1v1 答疑支持，解决学习中的任何疑问。</div>
-        <div class="chip">极致性价比：省去机构营销成本，将资源全部投入在真题体系与深度辅导教学中。</div>
+        <div class="chip">我们团队专注 quant / trader 求职，核心成员均来自一线业内。交付内容对标或者超过市面 10w-30w 的 package，欢迎对比和深度了解。传统求职机构的问题在于：导师专业度不可控，而我们从源头解决这个问题。</div>
       </div>
     </section>
 
     <section class="section" id="cta">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Section 07</div>
-          <h2>开启你的量化职业之路</h2>
+          <h2>报名方式与 Track 选择</h2>
         </div>
-        <div class="section-index">Slide 11</div>
       </div>
 
       <div class="card-grid grid-2">
         <article class="cta-box">
-          <h3>立即行动</h3>
+          <h3>如何选择适合自己的 Track</h3>
           <ul class="plain-list">
-            <li>咨询课程详情，获取个性化方案</li>
-            <li>发送简历获取初步竞争力评估</li>
-            <li>联系 Tuu 老师开启面试准备</li>
+            <li>如果你即将进入校招周期，直接选择现有校招冲刺 Track。</li>
+            <li>如果你还是低年级学生，希望提前布局履历与实习，再选择低年级成长 Track。</li>
+            <li>联系 Tuu 老师沟通背景，我们会基于当前年级、目标岗位和准备周期给出建议。</li>
           </ul>
         </article>
         <article class="card">
-          <div class="meta">核心特色回顾</div>
+          <div class="meta">完整交付回顾</div>
           <ul class="plain-list">
-            <li>真题穿透训练：覆盖 90% 必考点</li>
-            <li>分方向突破：针对 QR/QT/QD 定制</li>
-            <li>1v1 定制化辅导：实战导师全程跟跑</li>
-            <li>3 年有效期支持：直至成功获得 Offer</li>
+            <li>校招冲刺 Track：课程 A + 课程 B 6 小时 + 简历修改 + 项目包装 + Mock Interview。</li>
+            <li>低年级成长 Track：课程 A + 课程 B 10 小时 + 更长期的求职辅导 + 国内私募实习。</li>
+            <li>两个 Track 均共享独家真题题库、1v1 答疑支持与 3 年有效期。</li>
+            <li>所有辅导继续采用 1v1 方式交付，围绕真实量化岗位面试要求展开。</li>
           </ul>
           <div class="note-block">
-            <p>投资你的未来，选择最高效的准备方案</p>
+            <p>先选对 Track，再用更匹配你阶段的方案去完成量化求职准备。</p>
           </div>
         </article>
       </div>
